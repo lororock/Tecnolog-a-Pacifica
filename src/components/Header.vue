@@ -23,7 +23,7 @@ const dropdownNavbar = () => {
       <div class="flex md:order-2">
         <button type="button"
           class="text-white bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-700 font-medium rounded-lg text-sm px-4 py-2 text-center md:mr-0 ">
-          Contactanos
+          Suscribete
         </button>
         <button @click="navbarSticky" type="button"
           class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-400 rounded-lg md:hidden hover:bg-indigo-700 cus:outline-none focus:ring-2 focus:ring-indigo-800">
