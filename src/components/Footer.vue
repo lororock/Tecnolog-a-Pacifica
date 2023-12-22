@@ -94,4 +94,5 @@
                 </ul>
             </div>
         </div>
-</footer></template>
+    </footer>
+</template>

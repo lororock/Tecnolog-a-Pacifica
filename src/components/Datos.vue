@@ -14,8 +14,7 @@
 
                 <div>
                     <a href="#" class="block pt-10">
-                        <img alt="Signage"
-                            src="https://images.unsplash.com/photo-1588515724527-074a7a56616c?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80"
+                        <img alt="Signage" src="../assets/recurso 1.jpeg"
                             class="h-56 w-full rounded-bl-3xl rounded-tr-3xl object-cover sm:h-64 lg:h-72" />
                     </a>
                 </div>
@@ -42,5 +41,6 @@
                     </div>
                 </dl>
             </div>
-    </div>
-</section></template>
+        </div>
+    </section>
+</template>
