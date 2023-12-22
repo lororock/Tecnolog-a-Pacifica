@@ -21,10 +21,25 @@
                 </p>
 
                 <div class="mt-4 md:mt-8">
-                    <a href="#"
+                    <button @click="openModal"
                         class="inline-block rounded bg-indigo-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-emerald-700 focus:outline-none focus:ring focus:ring-yellow-400">
                         Nuestros Proyectos
-                    </a>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- El Modal -->
+        <div ref="modal" class="hidden fixed inset-0 z-50 overflow-auto bg-black bg-opacity-50">
+            <div class="flex items-center justify-center min-h-screen">
+                <div class="bg-white p-8 rounded">
+                    <!-- Contenido del Modal -->
+                    <p>Contenido del modal...</p>
+                    <!-- Botón para cerrar el modal -->
+                    <button @click="closeModal"
+                        class="mt-4 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+                        Cerrar
+                    </button>
                 </div>
             </div>
         </div>
@@ -33,3 +48,21 @@
             class="h-full w-full object-cover sm:h-[calc(100%_-_2rem)] sm:self-end sm:rounded-ss-[30px] md:h-[calc(100%_-_4rem)] md:rounded-ss-[60px]" />
     </section>
 </template>
+
+<script setup>
+
+import { ref } from 'vue';
+
+// Se utiliza ref para crear una referencia al modal
+const modal = ref(null);
+
+// Método para abrir el modal
+const openModal = () => {
+    modal.value.classList.remove('hidden');
+};
+
+// Método para cerrar el modal
+const closeModal = () => {
+    modal.value.classList.add('hidden');
+};
+</script>
