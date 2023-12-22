@@ -23,7 +23,15 @@ const dropdownNavbar = () => {
   <nav class="bg-indigo-600 fixed w-full z-20 top-0 left-0 border-b border-gray-200">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
       <a to="/" class="flex items-center">
-        <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">Tecnologia Pacifica</span>
+        <h1
+          :class="pageName === 'pacifico' ? 'self-center text-2xl font-semibold whitespace-nowrap text-white' : 'hidden'">
+          Tecnologia Pacifica</h1>
+        <h1
+          :class="pageName === 'inventas' ? 'self-center text-2xl font-semibold whitespace-nowrap text-white' : 'hidden'">
+          INVENTAS-APP</h1>
+        <h1
+          :class="pageName === 'artesanias' ? 'self-center text-2xl font-semibold whitespace-nowrap text-white' : 'hidden'">
+          Arte-Sanias</h1>
       </a>
       <div class="flex md:order-2">
         <button type="button"
@@ -44,9 +52,9 @@ const dropdownNavbar = () => {
         <ul
           class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-indigo-700 rounded-lg bg-indigo-600 md:flex-row md:space-x-8 md:mt-0 md:border-0">
           <li>
-            <a active-class="block py-2 pl-3 pr-4 text-white bg-blue-500 rounded md:bg-transparent md:text-blue-300 md:p-0"
+            <RouterLink to="/" active-class="block py-2 pl-3 pr-4 text-white bg-blue-500 rounded md:bg-transparent md:text-blue-300 md:p-0"
               class="block py-2 pl-3 pr-4 text-white rounded hover:bg-blue-500 md:hover:bg-transparent md:hover:text-blue-300 md:p-0"
-              aria-current="page">Inicio</a>
+              aria-current="page">Inicio</RouterLink>
           </li>
           <li>
             <a active-class="block py-2 pl-3 pr-4 text-white bg-blue-500 rounded md:bg-transparent md:text-blue-300 md:p-0"
