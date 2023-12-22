@@ -1,6 +1,10 @@
 
 <script setup>
 import { ref } from 'vue'
+import { RouterLink } from "vue-router";
+import { usePageNameStore } from "../stores/pageName";
+
+const { pageName } = usePageNameStore();
 
 const downSticky = ref(false);
 const dropdown = ref(false);
@@ -11,6 +15,7 @@ const navbarSticky = () => {
 
 const dropdownNavbar = () => {
   dropdown.value = !dropdown.value;
+  console.log(pageName);
 };
 </script>
 
@@ -40,13 +45,12 @@ const dropdownNavbar = () => {
           class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-indigo-700 rounded-lg bg-indigo-600 md:flex-row md:space-x-8 md:mt-0 md:border-0">
           <li>
             <a active-class="block py-2 pl-3 pr-4 text-white bg-blue-500 rounded md:bg-transparent md:text-blue-300 md:p-0"
-              to="/"
               class="block py-2 pl-3 pr-4 text-white rounded hover:bg-blue-500 md:hover:bg-transparent md:hover:text-blue-300 md:p-0"
               aria-current="page">Inicio</a>
           </li>
           <li>
             <a active-class="block py-2 pl-3 pr-4 text-white bg-blue-500 rounded md:bg-transparent md:text-blue-300 md:p-0"
-              to="/artesanos"
+              href="#informacion"
               class="block py-2 pl-3 pr-4 text-white rounded hover:bg-blue-500 md:hover:bg-transparent md:hover:text-blue-300 md:p-0">Informacion</a>
           </li>
 
@@ -70,12 +74,12 @@ const dropdownNavbar = () => {
               } absolute font-normal bg-blue-500 divide-y divide-indigo-600 rounded-lg shadow w-44`">
               <ul class="py-2 text-sm text-white" aria-labelledby="dropdownLargeButton">
                 <li>
-                  <a active-class="block px-4 py-2 bg-blue-600" to="/artesanias"
-                    class="block px-4 py-2 hover:bg-blue-600">Inventas</a>
+                  <RouterLink active-class="block px-4 py-2 bg-blue-600" to="/inventas"
+                    class="block px-4 py-2 hover:bg-blue-600">Inventas</RouterLink>
                 </li>
                 <li>
-                  <a active-class="block px-4 py-2 bg-blue-600" to="/obras-artisticas"
-                    class="block px-4 py-2 hover:bg-blue-600">Arte-Sanias</a>
+                  <RouterLink active-class="block px-4 py-2 bg-blue-600" to="/artesanias"
+                    class="block px-4 py-2 hover:bg-blue-600">Arte-Sanias</RouterLink>
                 </li>
                 <li>
                   <a active-class="block px-4 py-2 bg-blue-600" to="/comida-artesanal"

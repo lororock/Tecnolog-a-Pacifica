@@ -4,7 +4,6 @@ import Cabecera from '../components/Cabecera.vue'
 import Informacion from '../components/Informacion.vue'
 import Datos from '../components/Datos.vue'
 import Testimonios from '../components/Testimonios.vue'
-import Planes from '../components/Planes.vue'
 import Footer from '../components/Footer.vue'
 </script>
 
@@ -14,6 +13,5 @@ import Footer from '../components/Footer.vue'
   <Informacion />
   <Datos />
   <Testimonios />
-  <Planes />
   <Footer />
 </template>

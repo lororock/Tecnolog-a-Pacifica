@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
+import { usePageNameStore } from "../stores/pageName";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -7,6 +8,43 @@ const router = createRouter({
       path: "/",
       name: "home",
       component: () => import("../views/TecnologiaPacificaView.vue"),
+      beforeEnter: (to, from, next) => {
+        const pageNameStore = usePageNameStore();
+        pageNameStore.setPageName("pacifico");
+        console.log(
+          "Valor de pageName en la ruta home:",
+          pageNameStore.pageName
+        );
+        next();
+      },
+    },
+    {
+      path: "/inventas",
+      name: "inventas",
+      component: () => import("../views/InventasView.vue"),
+      beforeEnter: (to, from, next) => {
+        const pageNameStore = usePageNameStore();
+        pageNameStore.setPageName("inventas");
+        console.log(
+          "Valor de pageName en la ruta home:",
+          pageNameStore.pageName
+        );
+        next();
+      },
+    },
+    {
+      path: "/artesanias",
+      name: "artesanias",
+      component: () => import("../views/ArtesaniasView.vue"),
+      beforeEnter: (to, from, next) => {
+        const pageNameStore = usePageNameStore();
+        pageNameStore.setPageName("artesanias");
+        console.log(
+          "Valor de pageName en la ruta home:",
+          pageNameStore.pageName
+        );
+        next();
+      },
     },
     {
       path: "/:pathMatch(.*)*",
