@@ -11,10 +11,7 @@ const router = createRouter({
       beforeEnter: (to, from, next) => {
         const pageNameStore = usePageNameStore();
         pageNameStore.setPageName("pacifico");
-        console.log(
-          "Valor de pageName en la ruta home:",
-          pageNameStore.pageName
-        );
+        pageNameStore.scrollToTop();
         next();
       },
     },
@@ -25,10 +22,7 @@ const router = createRouter({
       beforeEnter: (to, from, next) => {
         const pageNameStore = usePageNameStore();
         pageNameStore.setPageName("inventas");
-        console.log(
-          "Valor de pageName en la ruta home:",
-          pageNameStore.pageName
-        );
+        pageNameStore.scrollToTop();
         next();
       },
     },
@@ -39,10 +33,7 @@ const router = createRouter({
       beforeEnter: (to, from, next) => {
         const pageNameStore = usePageNameStore();
         pageNameStore.setPageName("artesanias");
-        console.log(
-          "Valor de pageName en la ruta home:",
-          pageNameStore.pageName
-        );
+        pageNameStore.scrollToTop();
         next();
       },
     },
