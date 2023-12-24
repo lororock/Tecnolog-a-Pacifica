@@ -1,5 +1,5 @@
 <template>
-    <section class="bg-white" id="informacion">
+    <section class="bg-white" id="caracteristicas">
         <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 md:py-16 lg:px-8">
             <div class="mx-auto max-w-3xl text-center">
                 <h2 class="text-3xl font-bold text-gray-900 sm:text-4xl">Potencia tu Éxito con Nuestras Herramientas

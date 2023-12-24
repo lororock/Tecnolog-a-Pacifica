@@ -26,7 +26,7 @@ const closeModal = () => {
         <div class="p-8 md:p-12 lg:px-16 lg:py-24">
             <div class="mx-auto max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
                 <h2 class="text-2xl font-bold text-gray-900 md:text-3xl">
-                    Descubre el Futuro con Tecnología Pacífica: Innovación que Transforma
+                    Innovación que Transforma
                 </h2>
 
                 <p class="hidden text-gray-500 md:mt-4 md:block">
@@ -45,8 +45,8 @@ const closeModal = () => {
 
                 <div class="mt-4 md:mt-8">
                     <button @click="openModal"
-                        class="inline-block rounded bg-indigo-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-emerald-700 focus:outline-none focus:ring focus:ring-yellow-400">
-                        Nuestros Proyectos
+                        class="mt-8 inline-block rounded border border-indigo-600 bg-indigo-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500">
+                        Nuestro Enfoque
                     </button>
                 </div>
             </div>
@@ -57,10 +57,11 @@ const closeModal = () => {
             <div class="flex items-center justify-center min-h-screen">
                 <div class="bg-white p-8 rounded">
                     <!-- Contenido del Modal -->
-                    <div class="divide-y divide-gray-100 rounded-xl border border-gray-100 bg-white">
+                    <div
+                        class="divide-y divide-gray-100 rounded-xl border border-gray-100 bg-white max-w-screen-sm mx-auto">
                         <details class="group p-6 [&_summary::-webkit-details-marker]:hidden" open>
                             <summary class="flex cursor-pointer items-center justify-between gap-1.5 text-gray-900">
-                                <h2 class="text-lg font-medium">Lorem ipsum dolor sit amet consectetur adipisicing?</h2>
+                                <h2 class="text-lg font-medium">Plataforma de Gestión Empresarial</h2>
 
                                 <span class="relative h-5 w-5 shrink-0">
                                     <svg xmlns="http://www.w3.org/2000/svg"
@@ -80,16 +81,15 @@ const closeModal = () => {
                             </summary>
 
                             <p class="mt-4 leading-relaxed text-gray-700">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic veritatis molestias culpa
-                                in,
-                                recusandae laboriosam neque aliquid libero nesciunt voluptate dicta quo officiis explicabo
-                                consequuntur distinctio corporis earum similique!
+                                Gestiona todos los aspectos de tu negocio en un solo lugar. Desde la contabilidad hasta
+                                la gestión de inventarios, nuestra plataforma integral te proporciona el control total
+                                para tomar decisiones informadas y estratégicas.
                             </p>
                         </details>
 
                         <details class="group p-6 [&_summary::-webkit-details-marker]:hidden">
                             <summary class="flex cursor-pointer items-center justify-between gap-1.5 text-gray-900">
-                                <h2 class="text-lg font-medium">Lorem ipsum dolor sit amet consectetur adipisicing?</h2>
+                                <h2 class="text-lg font-medium">Marketing Digital Personalizado</h2>
 
                                 <span class="relative h-5 w-5 shrink-0">
                                     <svg xmlns="http://www.w3.org/2000/svg"
@@ -109,12 +109,39 @@ const closeModal = () => {
                             </summary>
 
                             <p class="mt-4 leading-relaxed text-gray-700">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab hic veritatis molestias culpa
-                                in,
-                                recusandae laboriosam neque aliquid libero nesciunt voluptate dicta quo officiis explicabo
-                                consequuntur distinctio corporis earum similique!
+                                Maximiza tu presencia en línea con nuestras herramientas de marketing digital. Desde
+                                campañas de redes sociales hasta estrategias de correo electrónico, te ayudamos a llegar
+                                a tu audiencia objetivo y a construir una marca sólida.
                             </p>
                         </details>
+
+                        <details class="group p-6 [&_summary::-webkit-details-marker]:hidden">
+                            <summary class="flex cursor-pointer items-center justify-between gap-1.5 text-gray-900">
+                                <h2 class="text-lg font-medium">Automatización de Procesos Empresariales</h2>
+                                <span class="relative h-5 w-5 shrink-0">
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="absolute inset-0 h-5 w-5 opacity-100 group-open:opacity-0" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+
+                                    <svg xmlns="http://www.w3.org/2000/svg"
+                                        class="absolute inset-0 h-5 w-5 opacity-0 group-open:opacity-100" fill="none"
+                                        viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </span>
+                            </summary>
+
+                            <p class="mt-4 leading-relaxed text-gray-700">
+                                Ahorra tiempo y recursos con nuestras soluciones de automatización. Desde la gestión de
+                                tareas repetitivas hasta la optimización de flujos de trabajo, liberamos tu tiempo para
+                                que puedas concentrarte en lo que realmente importa: hacer crecer tu negocio.
+                            </p>
+                        </details>
+
                     </div>
                     <!-- Botón para cerrar el modal -->
                     <button @click="closeModal"

@@ -79,7 +79,7 @@ const dropdownNavbar = () => {
 
           <li>
             <a active-class="block py-2 pl-3 pr-4 text-white bg-blue-500 rounded md:bg-transparent md:text-blue-300 md:p-0"
-              to="/artesanos"
+              href="#caracteristicas"
               class="block py-2 pl-3 pr-4 text-white rounded hover:bg-blue-500 md:hover:bg-transparent md:hover:text-blue-300 md:p-0">Caracteristicas</a>
           </li>
           <li>
@@ -116,7 +116,7 @@ const dropdownNavbar = () => {
             </div>
           </li>
           <li>
-            <a href="#"
+            <a href="#paquetes"
               class="block py-2 pl-3 pr-4 text-white rounded hover:bg-blue-500 md:hover:bg-transparent md:hover:text-blue-300 md:p-0">Paquetes</a>
           </li>
         </ul>
