@@ -38,6 +38,28 @@ const router = createRouter({
       },
     },
     {
+      path: "/design",
+      name: "design",
+      component: () => import("../views/DesignView.vue"),
+      beforeEnter: (to, from, next) => {
+        const pageNameStore = usePageNameStore();
+        pageNameStore.setPageName("design");
+        pageNameStore.scrollToTop();
+        next();
+      },
+    },
+    {
+      path: "/chango",
+      name: "chango",
+      component: () => import("../views/ChanGoProView.vue"),
+      beforeEnter: (to, from, next) => {
+        const pageNameStore = usePageNameStore();
+        pageNameStore.setPageName("chango");
+        pageNameStore.scrollToTop();
+        next();
+      },
+    },
+    {
       path: "/:pathMatch(.*)*",
       name: "NotFound",
       component: () => import("../views/NotFoundView.vue"),

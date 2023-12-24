@@ -22,17 +22,30 @@ const dropdownNavbar = () => {
 <template>
   <nav class="bg-indigo-600 fixed w-full z-20 top-0 left-0 border-b border-gray-200">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
-      <a to="/" class="flex items-center">
+      <a to="/" :class="pageName === 'pacifico' ? 'flex items-center' : 'hidden'">
         <img src="../assets/icono.inventas.png" class="h-12 mr-2" alt="Inventas-app" />
-        <h1
-          :class="pageName === 'pacifico' ? 'self-center text-2xl font-semibold whitespace-nowrap text-white' : 'hidden'">
+        <h1 class="self-center text-2xl font-semibold whitespace-nowrap text-white">
           Tecnologia Pacifica</h1>
-        <h1
-          :class="pageName === 'inventas' ? 'self-center text-2xl font-semibold whitespace-nowrap text-white' : 'hidden'">
+      </a>
+      <a to="/" :class="pageName === 'inventas' ? 'flex items-center' : 'hidden'">
+        <img src="../assets/icono.inventas.png" class="h-12 mr-2" alt="Inventas-app" />
+        <h1 class="self-center text-2xl font-semibold whitespace-nowrap text-white">
           INVENTAS-APP</h1>
-        <h1
-          :class="pageName === 'artesanias' ? 'self-center text-2xl font-semibold whitespace-nowrap text-white' : 'hidden'">
+      </a>
+      <a to="/" :class="pageName === 'artesanias' ? 'flex items-center' : 'hidden'">
+        <img src="../assets/icono.inventas.png" class="h-12 mr-2" alt="Inventas-app" />
+        <h1 class="self-center text-2xl font-semibold whitespace-nowrap text-white">
           Arte-Sanias</h1>
+      </a>
+      <a to="/" :class="pageName === 'design' ? 'flex items-center' : 'hidden'">
+        <img src="../assets/icono.inventas.png" class="h-12 mr-2" alt="Inventas-app" />
+        <h1 class="self-center text-2xl font-semibold whitespace-nowrap text-white">
+          design</h1>
+      </a>
+      <a to="/" :class="pageName === 'chango' ? 'flex items-center' : 'hidden'">
+        <img src="../assets/icono.inventas.png" class="h-12 mr-2" alt="Inventas-app" />
+        <h1 class="self-center text-2xl font-semibold whitespace-nowrap text-white">
+          ChanGo Pro</h1>
       </a>
       <div class="flex md:order-2">
         <button type="button"
@@ -53,7 +66,8 @@ const dropdownNavbar = () => {
         <ul
           class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-indigo-700 rounded-lg bg-indigo-600 md:flex-row md:space-x-8 md:mt-0 md:border-0">
           <li>
-            <RouterLink to="/" active-class="block py-2 pl-3 pr-4 text-white bg-blue-500 rounded md:bg-transparent md:text-blue-300 md:p-0"
+            <RouterLink to="/"
+              active-class="block py-2 pl-3 pr-4 text-white bg-blue-500 rounded md:bg-transparent md:text-blue-300 md:p-0"
               class="block py-2 pl-3 pr-4 text-white rounded hover:bg-blue-500 md:hover:bg-transparent md:hover:text-blue-300 md:p-0"
               aria-current="page">Inicio</RouterLink>
           </li>
@@ -71,7 +85,7 @@ const dropdownNavbar = () => {
           <li>
             <button @click="dropdownNavbar"
               class="flex items-center justify-between w-full py-2 pl-3 pr-4 text-white rounded hover:bg-blue-500 md:hover:bg-transparent md:border-0 md:hover:text-blue-300 md:p-0 md:w-auto">
-              Productos
+              Servicios
               <svg class="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                 viewBox="0 0 10 6">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -91,12 +105,13 @@ const dropdownNavbar = () => {
                     class="block px-4 py-2 hover:bg-blue-600">Arte-Sanias</RouterLink>
                 </li>
                 <li>
-                  <a active-class="block px-4 py-2 bg-blue-600" to="/comida-artesanal"
-                    class="block px-4 py-2 hover:bg-blue-600">???</a>
+                  <RouterLink active-class="block px-4 py-2 bg-blue-600" to="/design"
+                    class="block px-4 py-2 hover:bg-blue-600">Diseno</RouterLink>
                 </li>
               </ul>
               <div class="py-1">
-                <a href="#" class="block px-4 py-2 text-sm text-white hover:bg-blue-600">???</a>
+                <RouterLink to="/chango" class="block px-4 py-2 text-sm text-white hover:bg-blue-600">ChanGO Pro
+                </RouterLink>
               </div>
             </div>
           </li>
