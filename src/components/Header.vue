@@ -23,7 +23,7 @@ const dropdownNavbar = () => {
   <nav class="bg-indigo-600 fixed w-full z-20 top-0 left-0 border-b border-gray-200">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
       <a to="/" :class="pageName === 'pacifico' ? 'flex items-center' : 'hidden'">
-        <img src="../assets/icono-inventas.png" class="h-12 mr-2" alt="Inventas-app" />
+        <img src="../assets/pgp3.png" class="h-12 mr-2" alt="Inventas-app" />
         <h1 class="self-center text-2xl font-semibold whitespace-nowrap text-white">
           Tecnologia Pacifica</h1>
       </a>
