@@ -24,17 +24,16 @@ const closeModal = () => {
 <template>
     <section class="pt-10 overflow-hidden bg-gray-50 sm:grid sm:grid-cols-2 sm:items-center">
         <div class="p-8 md:p-12 lg:px-16 lg:py-24">
-            <div class="mx-auto max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
+
+            <div
+                :class="pageName === 'pacifico' ? 'mx-auto max-w-xl text-center ltr:sm:text-left rtl:sm:text-right' : 'hidden'">
                 <h2 class="text-2xl font-bold text-gray-900 md:text-3xl">
                     Innovación que Transforma
                 </h2>
-
                 <p class="hidden text-gray-500 md:mt-4 md:block">
                     Somos una startup apasionada comprometida con ofrecer soluciones tecnológicas vanguardistas que cambien
                     la forma en que vivimos, trabajamos y nos conectamos. En Tecnología Pacífica, exploramos las fronteras
                     de la tecnología para brindar experiencias que sean revolucionarias.
-
-
                 </p>
                 <p class="hidden text-gray-500 md:mt-4 md:block">
                     Nuestra misión es crear un impacto positivo en la sociedad a través de soluciones tecnológicas
@@ -42,7 +41,6 @@ const closeModal = () => {
                     la eficiencia. En un mundo en constante cambio,
                     creemos que la tecnología puede ser el puente hacia un futuro más automatizado y versatil para todos.
                 </p>
-
                 <div class="mt-4 md:mt-8">
                     <button @click="openModal"
                         class="mt-8 inline-block rounded border border-indigo-600 bg-indigo-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500">
@@ -50,6 +48,32 @@ const closeModal = () => {
                     </button>
                 </div>
             </div>
+
+            <div
+                :class="pageName === 'inventas' ? 'mx-auto max-w-xl text-center ltr:sm:text-left rtl:sm:text-right' : 'hidden'">
+                <h2 class="text-2xl font-bold text-gray-900 md:text-3xl">
+                    Gestión de tus inventarios y ventas
+                </h2>
+                <p class="hidden text-gray-500 md:mt-4 md:block">
+                    Somos una startup apasionada comprometida con ofrecer soluciones tecnológicas vanguardistas que cambien
+                    la forma en que vivimos, trabajamos y nos conectamos. En Tecnología Pacífica, exploramos las fronteras
+                    de la tecnología para brindar experiencias que sean revolucionarias.
+                </p>
+                <p class="hidden text-gray-500 md:mt-4 md:block">
+                    Nuestra misión es crear un impacto positivo en la sociedad a través de soluciones tecnológicas
+                    inteligentes y sostenibles. Nos esforzamos por construir un futuro donde la tecnología impulse
+                    la eficiencia. En un mundo en constante cambio,
+                    creemos que la tecnología puede ser el puente hacia un futuro más automatizado y versatil para todos.
+                </p>
+                <div class="mt-4 md:mt-8">
+                    <a href="https://www.tecnologiapacifica.com/" target="_blank"
+                        class="mt-8 inline-block rounded border border-indigo-600 bg-indigo-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500">
+                        Visitar Web
+                    </a>
+                </div>
+            </div>
+
+
         </div>
 
         <!-- El Modal -->
