@@ -24,27 +24,27 @@ const dropdownNavbar = () => {
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
       <a to="/" :class="pageName === 'pacifico' ? 'flex items-center' : 'hidden'">
         <img src="../assets/pgp3.png" class="h-12 mr-2" alt="Inventas-app" />
-        <h1 class="self-center text-2xl font-semibold whitespace-nowrap text-white">
+        <h1 class="hidden self-center text-2xl font-semibold whitespace-nowrap text-white sm:block">
           Tecnologia Pacifica</h1>
       </a>
       <a to="/" :class="pageName === 'inventas' ? 'flex items-center' : 'hidden'">
         <img src="../assets/icono-inventas.png" class="h-12 mr-2" alt="Inventas-app" />
-        <h1 class="self-center text-2xl font-semibold whitespace-nowrap text-white">
+        <h1 class="hidden self-center text-2xl font-semibold whitespace-nowrap text-white sm:block">
           INVENTAS-APP</h1>
       </a>
       <a to="/" :class="pageName === 'artesanias' ? 'flex items-center' : 'hidden'">
         <img src="../assets/icono-inventas.png" class="h-12 mr-2" alt="Inventas-app" />
-        <h1 class="self-center text-2xl font-semibold whitespace-nowrap text-white">
+        <h1 class="hidden self-center text-2xl font-semibold whitespace-nowrap text-white sm:block">
           Arte-Sanias</h1>
       </a>
       <a to="/" :class="pageName === 'design' ? 'flex items-center' : 'hidden'">
         <img src="../assets/icono-inventas.png" class="h-12 mr-2" alt="Inventas-app" />
-        <h1 class="self-center text-2xl font-semibold whitespace-nowrap text-white">
+        <h1 class="hidden self-center text-2xl font-semibold whitespace-nowrap text-white sm:block">
           design</h1>
       </a>
       <a to="/" :class="pageName === 'chango' ? 'flex items-center' : 'hidden'">
         <img src="../assets/icono-inventas.png" class="h-12 mr-2" alt="Inventas-app" />
-        <h1 class="self-center text-2xl font-semibold whitespace-nowrap text-white">
+        <h1 class="hidden self-center text-2xl font-semibold whitespace-nowrap text-white sm:block">
           ChanGo Pro</h1>
       </a>
       <div class="flex md:order-2">
