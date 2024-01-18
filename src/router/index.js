@@ -63,6 +63,12 @@ const router = createRouter({
       path: "/:pathMatch(.*)*",
       name: "NotFound",
       component: () => import("../views/NotFoundView.vue"),
+      beforeEnter: (to, from, next) => {
+        const pageNameStore = usePageNameStore();
+        pageNameStore.setPageName("NotFound");
+        pageNameStore.scrollToTop();
+        next();
+      },
     },
   ],
 });
