@@ -27,6 +27,11 @@ const dropdownNavbar = () => {
         <h1 class="hidden self-center text-2xl font-semibold whitespace-nowrap text-white sm:block">
           Tecnologia Pacifica</h1>
       </a>
+      <a to="/" :class="pageName === 'NotFound' ? 'flex items-center' : 'hidden'">
+        <img src="../assets/pgp3.png" class="h-12 mr-2" alt="Inventas-app" />
+        <h1 class="hidden self-center text-2xl font-semibold whitespace-nowrap text-white sm:block">
+          Tecnologia Pacifica</h1>
+      </a>
       <a to="/" :class="pageName === 'inventas' ? 'flex items-center' : 'hidden'">
         <img src="../assets/icono-inventas.png" class="h-12 mr-2" alt="Inventas-app" />
         <h1 class="hidden self-center text-2xl font-semibold whitespace-nowrap text-white sm:block">
