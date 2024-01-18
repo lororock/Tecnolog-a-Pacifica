@@ -157,7 +157,7 @@ const closeModal = () => {
                     </li>
 
                     <li>
-                        <a href="#" class="text-gray-500 transition hover:opacity-75"> Politicas de privacidad </a>
+                        <router-link to="/politica-privacidad" class="text-gray-500 transition hover:opacity-75">Politicas de privacidad</router-link>
                     </li>
 
                     <li>
