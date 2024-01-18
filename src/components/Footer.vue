@@ -153,11 +153,11 @@ const closeModal = () => {
             <div class="mt-16 border-t border-gray-100 pt-8 sm:flex sm:items-center sm:justify-between lg:mt-24">
                 <ul class="flex flex-wrap justify-center gap-4 text-xs lg:justify-end">
                     <li>
-                        <a href="#" class="text-gray-500 transition hover:opacity-75"> Terms & Conditions </a>
+                        <a href="#" class="text-gray-500 transition hover:opacity-75"> Terminos y condiciones </a>
                     </li>
 
                     <li>
-                        <a href="#" class="text-gray-500 transition hover:opacity-75"> Privacy Policy </a>
+                        <a href="#" class="text-gray-500 transition hover:opacity-75"> Politicas de privacidad </a>
                     </li>
 
                     <li>
