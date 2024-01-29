@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import { usePageNameStore } from "../stores/pageName";
-import PoliticaPrivacidad from '@/components/infoFooter/PrivacidadPoliticas.vue';
+
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -72,10 +73,15 @@ const router = createRouter({
       },
     },
     {
-      path: "/politica-privacidad",
-      name: "PoliticaPrivacidad"
-      component: () => import("components/infoFooter/PrivacidadPoliticas.vue"),
-
+      path: "/PoliticaPrivacidad",
+      name: "PoliticaPrivacidad",
+      component: () => import("../components/infoFooter/PrivacidadPoliticas.vue"),
+      beforeEnter: (to, from, next) => {
+        const pageNameStore = usePageNameStore();
+        pageNameStore.setPageName("PoliticaPrivacidad");
+        pageNameStore.scrollToTop();
+        next();
+      },
     },
   ],
 });

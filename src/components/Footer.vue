@@ -2,6 +2,9 @@
 import { ref } from "vue";
 import emailjs from "emailjs-com";
 import Swal from "sweetalert2";
+import { usePageNameStore } from "../stores/pageName";
+
+const { pageName } = usePageNameStore();
 
 emailjs.init("UwwiSkJ0GWVLGGUr4");
 
@@ -220,11 +223,10 @@ const enviarCorreo = () => {
           </li>
 
           <li>
-            <a href="#" class="text-gray-500 transition hover:opacity-75">
-              Privacy Policy
-            </a>
+            <router-link to="/PoliticaPrivacidad" :class="{ 'text-gray-500 transition hover:opacity-75': pageName === 'PoliticaPrivacidad', 'text-gray-500 transition hover:opacity-75': pageName !== 'PoliticaPrivacidad' }">
+            Privacy Policy
+            </router-link>
           </li>
-
           <li>
             <a href="#" class="text-gray-500 transition hover:opacity-75">
               Cookies

@@ -11,14 +11,8 @@
     </div>
   </template>
   
-  <script>
-  export default {
-    name: 'PoliticaPrivacidad',
-   
-  }
-  </script>
-  
   <style scoped> 
 
   </style>
+  
   
