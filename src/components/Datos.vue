@@ -25,7 +25,7 @@
                     <div class="flex flex-col rounded-lg bg-blue-100 px-4 py-8 text-center">
                         <dt class="order-last text-lg font-medium text-gray-500">Total De Herramientas</dt>
 
-                        <dd class="text-4xl font-extrabold text-blue-600 md:text-5xl">126</dd>
+                        <dd class="text-4xl font-extrabold text-blue-600 md:text-5xl">116</dd>
                     </div>
 
                     <div class="flex flex-col rounded-lg bg-blue-100 px-4 py-8 text-center">
