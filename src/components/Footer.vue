@@ -217,15 +217,15 @@ const enviarCorreo = () => {
       >
         <ul class="flex flex-wrap justify-center gap-4 text-xs lg:justify-end">
           <li>
-            <a href="#" class="text-gray-500 transition hover:opacity-75">
+            <RouterLink   to="terminosCondiciones" class="text-gray-500 transition hover:opacity-75">
               Terms & Conditions
-            </a>
+            </RouterLink>
           </li>
 
           <li>
-            <router-link to="/PoliticaPrivacidad" :class="{ 'text-gray-500 transition hover:opacity-75': pageName === 'PoliticaPrivacidad', 'text-gray-500 transition hover:opacity-75': pageName !== 'PoliticaPrivacidad' }">
+            <RouterLink to="/PoliticaPrivacidad" :class="{ 'text-gray-500 transition hover:opacity-75': pageName === 'PoliticaPrivacidad', 'text-gray-500 transition hover:opacity-75': pageName !== 'PoliticaPrivacidad' }">
             Privacy Policy
-            </router-link>
+            </RouterLink>
           </li>
           <li>
             <a href="#" class="text-gray-500 transition hover:opacity-75">

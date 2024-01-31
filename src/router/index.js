@@ -1,8 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import { usePageNameStore } from "../stores/pageName";
 
-
-
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -62,23 +60,36 @@ const router = createRouter({
       },
     },
     {
+      path: "/politicaPrivacidad",
+      name: "politicaPrivacidad",
+      component: () =>
+        import("../views/infoFooter/PrivacidadPoliticas.vue"),
+      beforeEnter: (to, from, next) => {
+        const pageNameStore = usePageNameStore();
+        pageNameStore.setPageName("pacifico");
+        pageNameStore.scrollToTop();
+        next();
+      },
+    },
+    {
+      path: "/terminosCondiciones",
+      name: "terminosCondiciones",
+      component: () =>
+        import("../views/infoFooter/TerminosCondiciones.vue"),
+      beforeEnter: (to, from, next) => {
+        const pageNameStore = usePageNameStore();
+        pageNameStore.setPageName("pacifico");
+        pageNameStore.scrollToTop();
+        next();
+      },
+    },
+    {
       path: "/:pathMatch(.*)*",
       name: "NotFound",
       component: () => import("../views/NotFoundView.vue"),
       beforeEnter: (to, from, next) => {
         const pageNameStore = usePageNameStore();
         pageNameStore.setPageName("NotFound");
-        pageNameStore.scrollToTop();
-        next();
-      },
-    },
-    {
-      path: "/PoliticaPrivacidad",
-      name: "PoliticaPrivacidad",
-      component: () => import("../components/infoFooter/PrivacidadPoliticas.vue"),
-      beforeEnter: (to, from, next) => {
-        const pageNameStore = usePageNameStore();
-        pageNameStore.setPageName("PoliticaPrivacidad");
         pageNameStore.scrollToTop();
         next();
       },
