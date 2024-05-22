@@ -62,8 +62,7 @@ const router = createRouter({
     {
       path: "/politicaPrivacidad",
       name: "politicaPrivacidad",
-      component: () =>
-        import("../views/infoFooter/PrivacidadPoliticas.vue"),
+      component: () => import("../views/PrivacidadPoliticas.vue"),
       beforeEnter: (to, from, next) => {
         const pageNameStore = usePageNameStore();
         pageNameStore.setPageName("pacifico");
@@ -74,8 +73,7 @@ const router = createRouter({
     {
       path: "/terminosCondiciones",
       name: "terminosCondiciones",
-      component: () =>
-        import("../views/infoFooter/TerminosCondiciones.vue"),
+      component: () => import("../views/TerminosCondiciones.vue"),
       beforeEnter: (to, from, next) => {
         const pageNameStore = usePageNameStore();
         pageNameStore.setPageName("pacifico");
