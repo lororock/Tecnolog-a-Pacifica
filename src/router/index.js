@@ -60,6 +60,28 @@ const router = createRouter({
       },
     },
     {
+      path: "/politicaPrivacidad",
+      name: "politicaPrivacidad",
+      component: () => import("../views/PrivacidadPoliticas.vue"),
+      beforeEnter: (to, from, next) => {
+        const pageNameStore = usePageNameStore();
+        pageNameStore.setPageName("pacifico");
+        pageNameStore.scrollToTop();
+        next();
+      },
+    },
+    {
+      path: "/terminosCondiciones",
+      name: "terminosCondiciones",
+      component: () => import("../views/TerminosCondiciones.vue"),
+      beforeEnter: (to, from, next) => {
+        const pageNameStore = usePageNameStore();
+        pageNameStore.setPageName("pacifico");
+        pageNameStore.scrollToTop();
+        next();
+      },
+    },
+    {
       path: "/:pathMatch(.*)*",
       name: "NotFound",
       component: () => import("../views/NotFoundView.vue"),

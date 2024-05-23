@@ -2,6 +2,9 @@
 import { ref } from "vue";
 import emailjs from "emailjs-com";
 import Swal from "sweetalert2";
+import { usePageNameStore } from "../stores/pageName";
+
+const { pageName } = usePageNameStore();
 
 emailjs.init("UwwiSkJ0GWVLGGUr4");
 
@@ -214,17 +217,16 @@ const enviarCorreo = () => {
       >
         <ul class="flex flex-wrap justify-center gap-4 text-xs lg:justify-end">
           <li>
-            <a href="#" class="text-gray-500 transition hover:opacity-75">
+            <RouterLink   to="terminosCondiciones" class="text-gray-500 transition hover:opacity-75">
               Terms & Conditions
-            </a>
+            </RouterLink>
           </li>
 
           <li>
-            <a href="#" class="text-gray-500 transition hover:opacity-75">
-              Privacy Policy
-            </a>
+            <RouterLink to="/PoliticaPrivacidad" :class="{ 'text-gray-500 transition hover:opacity-75': pageName === 'PoliticaPrivacidad', 'text-gray-500 transition hover:opacity-75': pageName !== 'PoliticaPrivacidad' }">
+            Privacy Policy
+            </RouterLink>
           </li>
-
           <li>
             <a href="#" class="text-gray-500 transition hover:opacity-75">
               Cookies
